@@ -1,0 +1,968 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A Material Design theme for MkDocs">
+      
+      
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
+    
+    
+      
+        <title>Material for MkDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.750b69bd.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "None", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#contoh-aplikasi" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Material for MkDocs
+            </span>
+            <span class="md-header-nav__topic">
+              Material
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/squidfunk/mkdocs-material" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    squidfunk/mkdocs-material
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="." title="Material" class="md-tabs__link md-tabs__link--active">
+        Material
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="extensions/admonition/" title="Extensions" class="md-tabs__link">
+          Extensions
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Material for MkDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/squidfunk/mkdocs-material" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    squidfunk/mkdocs-material
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Material
+      </label>
+    
+    <a href="." title="Material" class="md-nav__link md-nav__link--active">
+      Material
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contoh-aplikasi" title="Contoh Aplikasi" class="md-nav__link">
+    Contoh Aplikasi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credit-risk" title="Credit Risk" class="md-nav__link">
+    Credit Risk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sistem-pakar-diagnosa-penyakit-kusrini" title="Sistem Pakar Diagnosa Penyakit (Kusrini)" class="md-nav__link">
+    Sistem Pakar Diagnosa Penyakit (Kusrini)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="extensions/admonition/" title="Admonition" class="md-nav__link">
+      Admonition
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="extensions/codehilite/" title="CodeHilite" class="md-nav__link">
+      CodeHilite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="extensions/footnotes/" title="Footnotes" class="md-nav__link">
+      Footnotes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="extensions/metadata/" title="Metadata" class="md-nav__link">
+      Metadata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="extensions/permalinks/" title="Permalinks" class="md-nav__link">
+      Permalinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="extensions/pymdown/" title="PyMdown" class="md-nav__link">
+      PyMdown
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="specimen/" title="Specimen" class="md-nav__link">
+      Specimen
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="customization/" title="Customization" class="md-nav__link">
+      Customization
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="compliance/" title="Compliance with GDPR" class="md-nav__link">
+      Compliance with GDPR
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="release-notes/" title="Release notes" class="md-nav__link">
+      Release notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="authors-notes/" title="Author's notes" class="md-nav__link">
+      Author's notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contoh-aplikasi" title="Contoh Aplikasi" class="md-nav__link">
+    Contoh Aplikasi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credit-risk" title="Credit Risk" class="md-nav__link">
+    Credit Risk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sistem-pakar-diagnosa-penyakit-kusrini" title="Sistem Pakar Diagnosa Penyakit (Kusrini)" class="md-nav__link">
+    Sistem Pakar Diagnosa Penyakit (Kusrini)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Material</h1>
+                
+                <p><b>Decision Tree</b>  </p>
+<p><b>2.1 Dasar Teori</b> </p>
+<p>Di dalam kehidupan manusia sehari-hari, manusia selalu dihadapkan oleh berbagai macam masalah dari berbagai macam bidang.Masalah-masalah ini yang dihadapi oleh manusia tingkat kesulitan dan kompleksitasnya sangat bervariasi, mulai dari yang teramat sederhana dengan sedikit faktor-faktor yang berkaitan dengan masalah tersebut dan perlu diperhitungkan sampai dengan yang sangat rumit dengan banyak sekali faktor-faktor turut serta berkaitan dengan masalah tersebut dan perlu untuk diperhitungkan.</p>
+<p>Dengan pohon keputusan, manusia dapat dengan mudah melihat mengidentifikasi dan melihat hubungan antara faktor-faktor yang mempengaruhi suatu masalah dan dapat mencari penyelesaian terbaik dengan memperhitungkan faktor-faktor tersebut.Pohon keputusan ini juga dapat menganalisa nilai resiko dan nilai suatu informasi yang terdapat dalam suatu alternatif pemecahan masalah.Peranan pohon keputusan ini sebagai alat Bantu dalam mengambil keputusan (decision support tool) telah dikembangkan oleh manusia sejak perkembangan teori pohon yang dilandaskan pada teori graf.Kegunaan pohon keputusan yang sangat banyak ini membuatnya telah dimanfaatkan oleh manusia dalam berbagai macam sistem pengambilan keputusan.</p>
+<p><strong>2.2 Pengertian Pohon Keputusan</strong></p>
+<p>Pohon yang dalam analisis pemecahan masalah pengambilan keputusan adalah pemetaan mengenai alternatif-alternatif pemecahan masalah yang dapat diambil dari masalah tersebut. Pohon tersebut juga memperlihatkan faktor-faktor kemungkinan/probablitas yang akan mempengaruhi alternatif-alternatif keputusan tersebut, disertai dengan estimasi hasil akhir yang akan didapat bila kita mengambil alternatif keputusan tersebut.</p>
+<p><strong>2.3 Prosedur Pembentukan Pohon Keputusan</strong></p>
+<p><em>Decision tree</em> adalah sebuah struktur pohon, dimana setiap <em>node</em> pohon merepresentasikan atribut yang telah diuji, setiap cabang merupakan suatu pembagian hasil uji, dan <em>node</em> daun (<em>leaf)</em> merepresentasikan kelompok kelas tertentu. Level <em>node</em> teratas dari sebuah <em>decision tree</em> adalah <em>node</em> akar <em>(root)</em> yang biasanya berupa atribut yang paling memiliki pengaruh terbesar pada suatu kelas tertentu. Pada umumnya <em>decision tree</em> melakukan strategi pencarian secara <em>top-down</em> untuk solusinya. Pada proses mengklasifikasi data yang tidak diketahui, nilai atribut akan diuji dengan cara melacak jalur dari <em>node</em> akar <em>(root)</em> sampai <em>node</em> akhir (daun) dan kemudian akan diprediksi kelas yang dimiliki oleh suatu data baru tertentu.</p>
+<p>Sebuah model keputusan terdiri dari sekumpulan aturan untuk membagi jumlah populasi yang <em>heterogen</em> menjadi lebih kecil, lebih  <em>homogen</em> dengan memperhatikan pada variabel tujuannya. Sebuah model keputusan mungkin dibangun dengan saksama secara manual atau dapat tumbuh secara otomatis dengan menerapkan salah satu atau beberapa algoritma pohon keputusan untuk memodelkan himpunan data yang belum terklasifikasi (Kusrini, 2009).</p>
+<p>Variabel tujuan biasanya dikelompokkan dengan pasti dan model pohon keputusan lebih mengarah pada perhitungan probabilitas dari tiap-tiap <em>record</em> terhadap kategori-kategori tersebut atau untuk mengklasifikasi <em>record</em> dengan mengelompokkannya dalam satu kelas. Pohon keputusan juga dapat digunakan untuk mengestimasi nilai dari variabel <em>continue</em> meskipun ada beberapa teknik yang lebih sesuai untuk kasus ini.</p>
+<p>Data dalam pohon keputusan biasanya dinyatakan dalam bentuk tabel dengan atribut dan <em>record.</em> Atribut menyatakan suatu parameter yang dibuat sebagai kriteria dalm pembentukan pohon keputusan. Misalkan untuk menentukan main tenis, kriteria yang diperhatikan adalah cuaca, angin, dan temperatur. Salah satu atribut merupakan atribut yang menyatakan data solusi per item data yang disebut target atribut. Atribut memliki nilai-nilai yang dinamakan dengan <em>instance.</em> Misalkan atribut cuaca mempunyai <em>instance</em> berupa cerah, berawan dan hujan (Basuki dan Syarif, 2003). Proses pada pohon keputusan adalah mengubah bentuk data (tabel) menjadi model pohon, mengubah model pohon menjadi <em>rule,</em> dan menyederhanakan <em>rule</em> (Basuki dan Syarif, 2003).</p>
+<p>Dalam membangun <em>decision tree</em> menggunakan algoritma ID3 atau C4.5, yang diperkenalkan dan dikembangkan pertama kali oleh Ros Quinlan yang merupakan singkatan dari Iteractive Dichotomiser 3 atau Induction of Decision 3.  algoritma ID3 membentuk pohon keputusan dengan metode <em>divide and conquer</em> data secara rekursif dari atas ke bawah.
+  Strategi pembentukan <em>decision tree</em> dengan algoritma ID3  adalah:        </p>
+<ol>
+<li>
+<p>Pohon dimulai sebagai <em>node</em> tunggal      (akar/<em>root</em> ) yang merepresentasikan semua data.</p>
+</li>
+<li>
+<p>Sesudah <em>node root</em> dibentuk,      maka data pada <em>node</em> akar akan diukur dengan <em>information      gain</em> untuk dipilih atribut mana yang akan dijadikan atribut      pembaginya.</p>
+</li>
+<li>
+<p>Sebuah cabang dibentuk dari      atribut yang dipilih menjadi pembagi dan data akan didistribusikan ke      dalam cabang masing-masing.</p>
+</li>
+<li>
+<p>Algoritma ini akan terus menggunakan      proses yang sama atau bersifat rekursif untuk dapat membentuk sebuah <em>decision      tree.</em> ketika sebuah atribut telah dipilih menjadi node pembagi      atau cabang, maka atribut tersebut tidak diikutkan lagi dalam penghitungan      nilai <em>information gain.</em></p>
+</li>
+<li>
+<p>Proses pembagian rekursif akan      berhenti jika salah satu dari kondisi di bawah ini terpenuhi:</p>
+</li>
+<li>
+<ol>
+<li>Semua       data dari anak cabang telah termasuk dalam kelas yang sama.</li>
+</ol>
+</li>
+<li>Semua       atribut telah dipakai, tetapi masih tersisa data dalam kelas yang       berbeda. Dalam kasus ini, diambil data yang mewakili kelas terbanyak       untuk dijadikan label kelas.</li>
+<li>Tidak       terdapat data pada anak cabang yang baru. Dalam kasus ini, <em>node</em> daun       akan dipilih pada cabang sebelumnya dan diambil data yang mewakili kelas       terbanyak untuk dijadikan label kelas.</li>
+</ol>
+<p>EMV (Alternatif) = (Hasil kondisi alamiah 1) x (Kemungkinan terjadi kondisi alamiah 1) + (Hasil kondisi alamiah 2) x (Kemungkinan terjadi kondisi alamiah 2) + …. + (Hasil kondisi alamiah terakhir) x (Kemungkinan terjadi kondisi alamiah terakhir)</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong>EMV =**</strong>𝛴****(probability X nilai payoff yang diharapkan)**</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contoh-aplikasi">Contoh Aplikasi<a class="headerlink" href="#contoh-aplikasi" title="Permanent link">&para;</a></h2>
+<h3 id="credit-risk"><strong>Credit Risk</strong><a class="headerlink" href="#credit-risk" title="Permanent link">&para;</a></h3>
+<p>Berikut ini merupakan contoh dari salah satu kasus resiko kredit (<em>credit risk</em>) yang menggunakan <em>decision tree</em> untuk menentukan apakah seorang <em>potential customer</em> dengan karakteristik <em>saving</em>, <em>asset</em> dan <em>income</em> tertentu memiliki <em>good credit risk</em> atau <em>bad credit risk</em>.</p>
+<p>Dapat dilihat pada gambar tersebut, bahwa target variable dari decision tree tersebut atau variable yang akan diprediksi adalah credit risk dengan menggunakan predictor variable : saving, asset, dan income. Setiap nilai atribut dari predictor variable akan memiliki cabang menuju predictor variable selanjutnya, dan seterusnya hingga tidak dapat dipecah dan menuju pada target variable.</p>
+<p>Penentuan apakah diteruskan menuju predictor variable (decision node) atau menuju target variable (leaf node) tergantung pada keyakinan (knowledge) apakah potential customer dengan nilai atribut variable keputusan tertentu memiliki keakuratan nilai target variable 100% atau tidak. Misalnya pada kasus di atas untuk saving medium, ternyata knowledge yang dimiliki bahwa untuk seluruh potential customer dengan saving medium memiliki credit risk yang baik dengan keakuratan 100%. Sedangkan untuk nilai low asset terdapat kemungkinan good credit risk dan bad credit risk.</p>
+<p>Jika tidak terdapat pemisahan lagi yang mungkin dilakukan, maka algoritma decision tree akan berhenti membentuk decision node yang baru. Seharusnya setiap branches diakhiri dengan “pure” leaf node, yaitu leaf node dengan target variable yang bersifat unary untuk setiap records pada node tersebut, di mana untuk setiap nilai predictor variable yang sama akan memiliki nilai target variable yang sama. Tetapi, terdapat kemungkinan decision node memiliki “diverse” atributes, yaitu bersifat non‐unary untuk nilai target variablenya, di mana untuk setiap record dengan nilai predictor variable yang sama ternyata memiliki nilai target variable yang berbeda. Kondisi tersebut menyebabkan tidak dapat dilakukan pencabangan lagi berdasarkan nilai predictor variable. Sehingga solusinya adalah membentuk leaf node yang disebut “diverse” leaf node, dengan menyatakan level kepercayaan dari diverse leaf node tersebut. Misalnya untuk contoh data berikut ini :</p>
+<p><img alt="1558513768063" src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1558513768063.png" /></p>
+<p>Dari training data tersebut kemudian disusunlah alternatif untuk candidate split, sehingga setiap nilai untuk predictor variable di atas hanya membentuk 2 cabang, yaitu sebagai berikut:</p>
+<p>Kemudian untuk setiap candidate split di atas, dihitung variabel‐variabel berikut berdasarkan training data yang dimiliki. Adapun variabel‐variabel tersebut, yaitu :</p>
+<p><img alt="1558514036880" src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1558514036880.png" /></p>
+<p>,di mana</p>
+<p>Dapat dilihat dari contoh perhitungan di atas, bahwa yang memiliki nilai goodness of split * Φ(s/t) + yang terbesar, yaitu split 4 dengan nilai 0.64275. Oleh karena itu split 4 lah yang akan digunakan pada root node, yaitu split dengan : assets = low dengan assets = {medium, high}.</p>
+<p>Untuk penentuan pencabangan, dapat dilihat bahwa dengan assets=low maka didapatkan pure node leaf, yaitu bad risk (untuk record 2 dan 7). Sedangkan untuk assets = {medium, high} masih terdapat 2 nilai, yaitu good credit risk dan bad credit risk. Sehingga pencabangan untuk assets = {medium, high} memiliki decision node baru. Adapun pemilihan split yang akan digunakan, yaitu dengan menyusun perhitungan nilai Φ(s/t) yang baru tanpa melihat split 4, record 2 dan 7.</p>
+<p><img alt="1558514108765" src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1558514108765.png" /></p>
+<p>Demikian seterusnya hingga akhirnya dibentuk leaf node dan membentuk decision tree yang utuh (<em>fully grown form</em>) seperti di bawah ini :</p>
+<p><img alt="1558514158462" src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1558514158462.png" /></p>
+<h3 id="sistem-pakar-diagnosa-penyakit-kusrini"><em>Sistem Pakar Diagnosa Penyakit (Kusrini)</em><a class="headerlink" href="#sistem-pakar-diagnosa-penyakit-kusrini" title="Permanent link">&para;</a></h3>
+<p>Dalam aplikasi ini terdapat tabel-tabel sebagai berikut:</p>
+<ul>
+<li>Tabel Rekam_Medis, berisi data asli rekam medis      pasien</li>
+<li>
+<p>Tabel Kasus, beisi data variabel yang dapat      mempengaruhi kesimpulan diagnosis dari pasien-pasien yang ada, misalnya      Jenis Kelamin, Umur, Daerah_Tinggal, Gejala_1 s/d gejala_n, Hasil_Tes_1      s/d Hasi_Tes_n. Selain itu dalam tabel ini juga memiliki field      Hasil_Diagnosis.</p>
+</li>
+<li>
+<p>Tabel Aturan, berisi aturan hasil ekstrak dari      pohon keputusan.</p>
+</li>
+</ul>
+<p>Proses akuisisi pengetahuan yang secara biasanya dalam sistem pakar dilakukan oleh sistem pakar, dalam sistem ini akan dillakukan dengan urutan proses ditunjukkan pada gambar berikut:</p>
+<p>[<img alt="https" src="https://fairuzelsaid.files.wordpress.com/2009/11/kusruni1.gif" /></p>
+<p>Hasil pembentukan pohon keputusan bisa seperti pohon keputusan yang tampak pada gambar:</p>
+<p><img alt="1558514223393" src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1558514223393.png" /></p>
+<p>pada pohon keputusan melambangkan sebagai node akar atau cabang (bukan daun) sedangkan kotak
+ melambangkan node daun. Jika pengetahuan yang terbentuk beruka kaidah produksi dengan format:
+ Jika Premis Maka Konklusi Node-node akar akan menjadi Premis dari aturan sedangkan node daun akan menjadi bagian konklusinya. Dari gambar pohon keputusan pada gambar 4, dapat dibentuk aturan sebagai berikut:</p>
+<ol>
+<li>Jika Atr_1 = N_1
+         Dan Atr_2 = N_4
+         Dan Atr_3 = N_9
+         Maka H_1</li>
+<li>Jika Atr_1 = N_1
+         Dan Atr_2 = N_4
+         Dan Atr_3 = N_10
+         Dan Atr_4 = N_11
+         Maka H_2</li>
+<li>Jika Atr_1 = N_1
+         Dan Atr_2 = N_4
+         Dan Atr_3 = N_10
+         Dan Atr_4 = N_12
+         Maka H_2</li>
+<li>Jika Atr_1 = N_1
+         Dan Atr_2 = N_5
+         Maka H_4</li>
+<li>Jika Atr_1 = N_2
+         Maka H_5</li>
+<li>Jika Atr_1 = N_3
+         Dan Atr_5 = N_6
+         Maka H_6</li>
+<li>Jika Atr_1 = N_3
+         Dan Atr_5 = N_7
+         Maka H_7</li>
+<li>Jika Atr_1 = N_3
+         Dan Atr_5 = N_8
+         Maka H_8</li>
+</ol>
+<p>Model case based reasoning dapat digunakan sebagai metode akuisisi pengetahuan dalam aplikasi system pakar diagnosis penyakit. Aturan yagn dihasilkan system ini mampu digunakan untuk mendiagnosis penyakit didasarkan pada data-data pasien. Dalam penentuan diagnosis penyakit belum diimplementasikan derajat kepercayaan terhadap hasil diagnosis tersebut.</p>
+<p>Asumsi yang saat menggunakan pohon keputusan:</p>
+<ul>
+<li>Pada awalnya, seluruh rangkaian pelatihan dianggap sebagai akar.</li>
+<li>Nilai fitur lebih disukai sebagai kategori. Jika nilai kontinu maka mereka didiskritisasi sebelum membangun model.</li>
+<li>Catatan didistribusikan secara rekursif berdasarkan nilai atribut.</li>
+<li>Urutan untuk menempatkan atribut sebagai root atau simpul internal  pohon dilakukan dengan menggunakan beberapa pendekatan statistik.</li>
+</ul>
+<p><img alt="img" src="https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1545934190/2_btay8n.png" /></p>
+<p>Algoritma Pohon Keputusan:</p>
+<ul>
+<li>Tempatkan atribut terbaik dari dataset kami di akar pohon.</li>
+<li>Membagi set pelatihan menjadi himpunan bagian. Subset harus dibuat  sedemikian rupa sehingga setiap subset berisi data dengan nilai yang  sama untuk suatu atribut.</li>
+<li>Ulangi langkah 1 dan langkah 2 pada setiap subset sampai Anda menemukan simpul daun di semua cabang pohon.</li>
+</ul>
+<p>Saat membangun classifier pohon keputusan, dapat meningkatkan  akurasinya dengan menyetelnya dengan parameter yang berbeda. Tetapi  penyempurnaan ini harus dilakukan dengan hati-hati karena dengan  melakukan ini, algoritma dapat menyesuaikan dengan data training &amp;  pada akhirnya itu akan membangun model generalisasi yang buruk.</p>
+<p>Dalam memprediksi data dengan metode Decision Tree menggunakan salah  satu dari 2 kriteria yaitu “gini index” atau “information gain”.  Kriteria ini digunakan untuk memilih banyaknya attributes dari dataset  yang atributnya akan ditempatkan pada root node atau internal node.</p>
+<p><strong>Manfaat Pohon Keputusan</strong></p>
+<p>Pohon keputusan adalah salah satu metode klasifikasi yang paling populer karena mudah untuk diinterpretasi oleh manusia. Pohon keputusan adalah model prediksi menggunakan struktur pohon atau struktur berhirarki. Konsep dari pohon keputusan adalah mengubah data menjadi pohon keputusan dan aturan-aturan keputusan. Manfaat utama dari penggunaan pohon keputusan adalah kemampuannya untuk mem-<em>break down</em> proses pengambilan keputusan yang kompleks menjadi lebih simpel sehingga pengambil keputusan akan lebih menginterpretasikan solusi dari permasalahan. Pohon Keputusan juga berguna untuk mengeksplorasi data, menemukan hubungan tersembunyi antara sejumlah calon variabel input dengan sebuah variabel target. Pohon keputusan memadukan antara eksplorasi data dan pemodelan, sehingga  sangat bagus sebagai langkah awal dalam proses pemodelan bahkan ketika dijadikan sebagai model akhir dari beberapa teknik lain. Sering terjadi tawar menawar antara keakuratan model dengan transparansi model. Dalam beberapa aplikasi, akurasi dari sebuah klasifikasi atau prediksi adalah satu-satunya hal yang ditonjolkan, misalnya sebuah perusahaan <em>direct mail</em> membuat sebuah model yang akurat untuk memprediksi anggota mana yang berpotensi untuk merespon permintaan, tanpa memperhatikan bagaimana atau mengapa model tersebut bekerja.</p>
+<p><strong>Kelebihan Pohon Keputusan</strong></p>
+<ul>
+<li>Daerah pengambilan keputusan yang sebelumnya kompleks dan sangat global, dapat diubah menjadi lebih simpel dan spesifik.</li>
+<li>Eliminasi perhitungan-perhitungan yang tidak diperlukan, karena ketika menggunakan metode pohon keputusan maka sample diuji hanya berdasarkan kriteria atau kelas tertentu.</li>
+<li>Fleksibel untuk memilih fitur dari internal node yang berbeda, fitur yang terpilih akan membedakan suatu kriteria dibandingkan kriteria yang lain dalam node yang sama. Kefleksibelan metode pohon keputusan ini meningkatkan kualitas keputusan yang dihasilkan jika dibandingkan ketika menggunakan metode penghitungan satu tahap yang lebih konvensional</li>
+<li>Dalam analisis multivariat, dengan kriteria dan kelas yang jumlahnya sangat banyak, seorang penguji biasanya perlu untuk mengestimasikan baik itu distribusi dimensi tinggi ataupun parameter tertentu dari distribusi kelas tersebut. Metode pohon keputusan dapat menghindari munculnya permasalahan ini dengan menggunakan criteria yang jumlahnya lebih sedikit pada setiap node internal tanpa banyak mengurangi kualitas keputusan yang dihasilkan.</li>
+</ul>
+<p><strong>Kekurangan Pohon Keputusan</strong></p>
+<ul>
+<li>Terjadi overlap terutama ketika kelas-kelas dan criteria yang digunakan jumlahnya sangat banyak. Hal tersebut juga dapat menyebabkan meningkatnya waktu pengambilan keputusan dan jumlah memori yang diperlukan.</li>
+<li>Pengakumulasian jumlah eror dari setiap tingkat dalam sebuah pohon keputusan yang besar.</li>
+<li>Kesulitan dalam mendesain pohon keputusan yang optimal.</li>
+<li>Hasil kualitas keputusan yang didapatkan dari metode pohon keputusan sangat tergantung pada bagaimana pohon tersebut didesain.</li>
+</ul>
+<p><strong>Model Pohon Keputusan</strong></p>
+<p>Perhatikan gambar berikut :</p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/POHON.gif" /></p>
+<p>Disini setiap percabangan menyatakan kondisi yang harus dipenuhi dan tiap ujung pohon menyatakan kelas data. Contoh pada Gambar  diatas adalah identifikasi pembeli komputer,dari pohon keputusan tersebut diketahui bahwa salah satu kelompok yang potensial membeli komputer adalah orang yang berusia di bawah 30 tahun dan juga pelajar. Setelah sebuah pohon keputusan dibangun maka dapat digunakan untuk mengklasifikasikan <em>record</em> yang belum ada kelasnya. Dimulai dari <em>node root</em>, menggunakan tes terhadap atribut dari <em>record</em> yang belum ada kelasnya tersebut lalu mengikuti cabang yang sesuai dengan hasil dari tes tersebut, yang akan membawa kepada <em>internal node</em> (<em>node</em> yang memiliki satu cabang masuk dan dua atau lebih cabang yang keluar), dengan cara harus melakukan tes lagi terhadap atribut atau <em>node</em> daun. <em>Record</em> yang kelasnya tidak diketahui kemudian diberikan kelas yang sesuai dengan kelas yang ada pada <em>node</em> daun. Pada pohon keputusan setiap simpul daun menandai label kelas. Proses dalam pohon keputusan yaitu mengubah bentuk data (tabel) menjadi model pohon (<em>tree</em>) kemudian mengubah model pohon tersebut menjadi aturan (<em>rule</em>).</p>
+<p><strong>Decision Tree Cocok untuk Masalah:</strong></p>
+<p>•   Data dalam bentuk atribut-nilai. Kondisi ideal adalah jika isi nilai jumlahnya sedikit. Misalnya:   “panas”, “sedang”, “dingin”.</p>
+<p>•   Output diskrit.</p>
+<p>•   Training data dapat tidak lengkap.</p>
+<p><strong>Langkah - langkah Konstruksi Pohon Keputusan</strong></p>
+<ol>
+<li>
+<p>Pohon dimulai dengan sebuah simpul yang mempresentasikan sampel data pelatihan yaitu dengan membuat simpul akar.</p>
+</li>
+<li>
+<p>Jika semua sampel berada dalam kelas yang sama, maka simpul ini menjadi  daun dan dilabeli menjadi kelas. Jika tidak, information gain akan digunakan untuk memilih atribut terbaik dalam memisahkan data sampel menjadi kelas - kelas individu.</p>
+</li>
+<li>
+<p>Cabang akan dibuat untuk setiap nilai pada atribut dan data sampel akan dipartisi lagi.</p>
+</li>
+<li>
+<p>Algoritma ini menggunakan proses rekursif untuk membentuk pohon keputusan pada setiap data partisi. Jika sebuah atribut sudah digunakan disebuah simpul, maka atribut ini tidak  akan digunakan lagi disimpul anak- anaknya.</p>
+</li>
+<li>
+<p>Proses ini berhenti jika  dicapai kondisi seperti berikut :</p>
+</li>
+</ol>
+<p>• Semua sampel pada simpul berada di dalam satu kelas.</p>
+<p>• Tidak ada atribut lainnya yang dapat digunakan untuk mempartisi sampel lebih lanjut.   Dalam hal ini akan diterapkan suara terbanyak. Ini berarti mengubah sebuah simpul menjadi daun dan melabelinya dengan kelas dengan suara terbanyak.</p>
+<p><strong>Cara Pemilihan Atribut</strong></p>
+<p>• Entrophy: Ukuran kemurnian, semakin murni, semakin homogen, semakin rendah nilainya.</p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/eee.PNG" /></p>
+<p>• Information  Gain: pengurangan entropy disebabkan oleh partisi berdasarkan suatu atribut. </p>
+<p>Semakin besar info gain = atribut itu semakin membuat homogen = semakin bagus</p>
+<p>Idenya : pilih  atribut dengan info gain yg paling besar.</p>
+<p>​   <strong>Gain Information</strong></p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/gain.PNG" /></p>
+<p>​   Gain(A) seberapa besar entropy berkurang akibat atribut A. Makin besar makin bagus.</p>
+<p><strong>Contoh Implementasi Decision Tree atau Pohon Keputusan pada Data Buys Computer</strong></p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/data.PNG" /></p>
+<p>Entrophy  untuk dua kelas : positif (<strong>+</strong>) dan negatif  (<strong>-</strong>)</p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/entropy.PNG" /></p>
+<p>Perhitungan Entropy pada setiap data :</p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/entropy%202.PNG" /></p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/entropy%203.PNG" /></p>
+<p><strong>Contoh Pemilihan Atribut</strong></p>
+<p>•Class P: buys_computer = “yes”</p>
+<p>•Class N: buys_computer = “no”</p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT01.PNG" /></p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT02.PNG" /></p>
+<p>Berarti ada 5 dari 14 “age &lt;=30” dgn 2 Yes  dan 3 No.  </p>
+<p>Gain (Age) = Info(D) – Info age (D) </p>
+<p>​                   =0.940 – 0.694 = 0.246 </p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT03.PNG" /></p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT04.PNG" /></p>
+<p><strong>Setelah pemilihan atribut Age maka pilih atribut selanjutnya :</strong></p>
+<p><em>Gain (Age) = 0.246</em>         yang terbesar, dipilih </p>
+<p>Gain (income)=0.029</p>
+<p>Gain(student)=0.151</p>
+<p>Gain(credit_rating) =0.048</p>
+<p><strong><em>Setelah AGE, atribut apa selanjutnya?</em></strong></p>
+<p>Diproses untuk setiap cabang selama masih ada &gt; 1 kelas</p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT05.PNG" /></p>
+<p>Selanjutnya... proses data yang &lt;=30</p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/CT06.PNG" /></p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT06.PNG" /></p>
+<p>Gain(age) tidak perlu dihitung lagi, hitung gain(student), gain(credit_rating).</p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT07.PNG" /></p>
+<p>Gain (student) = Info(D) – Infostudent(D) </p>
+<p>​                          = 0.97 – 0 </p>
+<p>​                          = 0.97</p>
+<p>hitung gain(credit_rating)</p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT08.PNG" /></p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT09.PNG" /></p>
+<p>Gain (credit_rating) = Info(D) – Infostudent(D) </p>
+<p>​                                   = 0.97 – 0.95 </p>
+<p>​                                  = 0.02</p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT10.PNG" /></p>
+<p>Bandingkan semua gain, ambil yang paling besar</p>
+<p><em>Gain (studet)  = 0.97</em></p>
+<p><em>Gain (credit_rating =  0.02</em></p>
+<p><em>Gain (income) =  0.4</em></p>
+<p><strong><em>Paling Besar Yaitu ; Student</em></strong></p>
+<p><strong><em>Maka diperoleh hasil Decision Tree atau Poho keputusan seperti dibawah ini:</em></strong></p>
+<p><img alt="" src="E:/SEMESTER%204/mkdocs-material-master/docs/assets/images/DT11.PNG" /></p>
+<p><strong>Referensi:</strong> </p>
+<ul>
+<li>
+<p>Kusrini, 2006, Sistem Pakar Teori dan Aplikasi,      Penerbit Andi Offset, Yogyakarta.</p>
+</li>
+<li>
+<p>Santosa, Budi. 2007. Data Mining : <em>Teknik      Pemanfaatan Data untuk keperluan Bisnis</em>. Graha Ilmu. Yogyakarta.</p>
+</li>
+<li>
+<p>Tan, Pang-Ning, Michael Steinbach, and Vipin      Kumar. 2004. <em>Introduction to Data Mining</em>.</p>
+</li>
+<li>
+<p>Witten, Ian H. dan Eibe Frank. 2005. <em>Data      Mining: Practical machine learning tools and techniques</em>,<em>2<sup>nd</sup>      Edition</em>. Morgan Kaufmann. San Francisco.</p>
+</li>
+<li>
+<p><a href="https://www.google.com/search?q=pohon+keputusan+dalam+data+mining&amp;safe=strict&amp;client=firefox-b-ab&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=0ahUKEwi-t6O5oariAhXEgeYKHZ9DAt4Q_AUIDigB&amp;biw=1366&amp;bih=657">https://www.google.com/search?q=pohon+keputusan+dalam+data+mining&amp;safe=strict&amp;client=firefox-b-ab&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=0ahUKEwi-t6O5oariAhXEgeYKHZ9DAt4Q_AUIDigB&amp;biw=1366&amp;bih=657</a></p>
+</li>
+<li>
+<p><a href="https://fairuzelsaid.wordpress.com/2009/11/24/data-mining-konsep-pohon-keputusan/">https://fairuzelsaid.wordpress.com/2009/11/24/data-mining-konsep-pohon-keputusan/</a></p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="getting-started/" title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Getting started
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2019 Martin Donath
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/squidfunk" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.8c0d971c.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>
